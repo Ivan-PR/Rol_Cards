@@ -1,0 +1,239 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	background-image:url("../img/fons.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-color: #464646;
+}
+
+
+#container{
+	margin: 0 auto;
+	max-width: 1200px;
+	min-width: 600px;
+	width: 500px;
+	height:100%;
+	padding: 25px;
+	
+}
+
+input, label{
+	text-align:center;
+	display:block;
+	margin: 0 auto;
+}
+
+td img {
+	display: block;
+	margin: 0 auto;
+	border-radius: 8px;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.35);
+}
+
+table {
+	margin: 0 auto;
+	padding:15px;
+	margin-bottom: 20px;
+	background: linear-gradient(to top, #c6a666,#f5e3b0);
+	border: 2px solid #feb233;
+	border-spacing:5px;
+	border-radius: 10px;
+	box-shadow: 0px 0px 25px orange;
+}
+
+caption{
+	margin-bottom: 2px;
+	background: linear-gradient(to left, #c6a666,#f5e3b0);
+	border: 2px solid #feb233;
+	border-radius: 10px;
+	box-shadow: 0px 0px 25px orange;
+}
+
+caption h2,th {
+	color:orange;
+	text-shadow: 0.1em 0.1em 0.2em black;
+}
+
+td,th {
+	padding:4px;
+	border-radius:5px;
+	border: 2px solid #feb233;
+}
+
+tr:nth-last-child(1) td:nth-last-child(1),
+tr:nth-last-child(2) td:nth-last-child(1) {
+	padding: 5px;
+}
+
+td:nth-child(1) {
+	color: orange;
+	font-weight: bold;
+	text-shadow: 0.1em 0.1em 0.2em brown;
+}
+
+tr:nth-last-child(n+3) td:nth-child(1n+2), span {
+	color: white !important;
+	text-shadow: 0.1em 0.1em 0.2em black;
+	text-align: center !important;
+	font-weight: bold !important;
+	font-style: italic !important;
+}
+
+label{
+	color: orange;
+	font-weight: bold;
+	text-shadow: 0.1em 0.1em 0.2em brown;
+}
+
+input[type=text] {
+	background: linear-gradient(to top, #c6a666,#f5e3b0);
+	height:25px;
+	color:white;
+	font-weight: bold;
+	margin-top:5px;
+	margin-bottom:15px;
+
+}
+.crt{
+	display:flex;
+	justify-content: space-around;
+}
+
+.crt > * {
+	background-color: #f8d661;
+	padding:10px;
+	height: 45px;
+	border-radius:5px;
+}
+
+input[type=submit]:hover, button:hover {
+	background: linear-gradient(to top, #f8d661,#00b58f);
+	position:relative;
+	bottom:2px;
+}
+progress {
+	color: red;
+	width: 100%;
+	border-radius: 50px;
+}
+
+progress.mana {
+	color: blue;
+	width: 100%;
+}
+
+progress::-moz-progress-bar {
+	background: red;
+	width: 100%;
+	border-radius: 50px;
+}
+
+progress.mana::-moz-progress-bar {
+	background: blue;
+	width: 100%;
+	border-radius: 50px;
+}
+
+progress::-webkit-progress-value {
+	background: red;
+	width: 100%;
+	border-radius: 50px;
+}
+
+progress.mana::-webkit-progress-value {
+	background: blue;
+	width: 100%;
+	border-radius: 50px;
+}
+
+/*________________FORM______________*/
+h2 img {
+	margin-right:5px;
+}
+
+.confirm {
+	margin-bottom:5px;
+	text-align:center;
+	color:#57e389;
+	text-shadow: 0.1em 0.1em 0.2em green;
+}
+/*_____________PAGINACIO______________*/
+
+@import url('https://fonts.googleapis.com/css2?family=Goblin+One&display=swap');
+
+#container2{
+	margin: 0 auto;
+	max-width: 1200px;
+	min-width: 600px;
+	width: 500px;
+	height:100%;
+	padding: 25px;
+}
+
+.presentacio{
+	width:45%;
+	display:inline-block;
+	margin-top:25px;
+}
+
+.titol{
+	font-family: 'Goblin One';
+	text-transform:uppercase;
+	background: linear-gradient(yellow,red);
+  	-webkit-background-clip: text;
+ 	color: transparent;
+ 	font-size:35px;
+}
+
+.llista li {
+	color:white;
+	text-shadow: 0.1em 0.1em 0.2em green;
+	font-size:20px;
+	margin: 0;
+	padding: 16px 0 6px 34px;
+	list-style: none;
+	background-image: url("../img/axe.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 18px;
+}
+
+.para{
+	color: white;
+	text-shadow: 0.1em 0.1em 0.2em green;
+}
+
+.filtre{
+	display:initial !important;
+		
+}
+.sfiltre {
+	cursor: pointer;
+	box-shadow: 0 2px 0 2px rgba(200,0,0,0.4);
+	height: 30px;
+	border: 3px solid orange;
+	border-radius: 5px;
+	width: 150px;
+}
+.pagi{
+	position:absolute;
+	color:orange;
+}
+
+.pagi a{
+	color:white;
+}
+
+.pagi a:hover{
+	font-weight: bold;
+	position:relative;
+	bottom:5px;
+}
+
+
