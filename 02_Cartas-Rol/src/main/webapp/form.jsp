@@ -34,7 +34,6 @@
 		String Rza = request.getParameter("raza");
 		String picture = request.getParameter("img");
 		
-		
 		// recollim valors formulari:
 		
 		int nfue=Integer.parseInt(Vfue);
@@ -62,68 +61,45 @@
 	} %>
 		<table>
 			<caption>
-				<h2>
-					<%out.print(nom_carta);%>
-				</h2>
-				<br>
-				<h2>
-					<%out.print(Rza);%>
-				</h2>
+				<h2><%out.print(nom_carta);%></h2><br>
+				<h2><%out.print(Rza);%></h2>
 			</caption>
 			<tr>
-				<td rowspan="9" width="100px" height="300px"><img
-					src="img/<%out.print(picture);%>" alt="<%out.print(picture);%>"
-					height="auto" width="110px" /></td>
+				<td rowspan="9" width="100px" height="300px"><img src="img/<%out.print(picture);%>" alt="<%out.print(picture);%>" height="auto" width="110px" /></td>
 				<th>Carac.</th>
 				<th>Valor Final</th>
 			</tr>
 			<tr>
 				<td><i>FUE:</i></td>
-				<td>
-					<%out.print(Vfue);%>
-				</td>
+				<td><%out.print(Vfue);%></td>
 			</tr>
 			<tr>
 				<td><i>DES:</i></td>
-				<td>
-					<%out.print(Vdes);%>
-				</td>
+				<td><%out.print(Vdes);%></td>
 			</tr>
 			<tr>
 				<td><i>CON:</i></td>
-				<td>
-					<%out.print(Vcon);%>
-				</td>
+				<td><%out.print(Vcon);%></td>
 			</tr>
 			<tr>
 				<td><i>INT:</i></td>
-				<td>
-					<%out.print(Vint);%>
-				</td>
+				<td><%out.print(Vint);%></td>
 			</tr>
 			<tr>
 				<td><i>SAB:</i></td>
-				<td>
-					<%out.print(Vsab);%>
-				</td>
+				<td><%out.print(Vsab);%></td>
 			</tr>
 			<tr>
 				<td><i>CAR:</i></td>
-				<td>
-					<%out.print(Vcar);%>
-				</td>
+				<td><%out.print(Vcar);%></td>
 			</tr>
 			<tr>
 				<td><i>P.V </i></td>
-				<td style="text-align: center"><span>
-						<%out.print(Vpv);%>
-				</span></td>
+				<td style="text-align: center"><span><%out.print(Vpv);%></span></td>
 			</tr>
 			<tr>
 				<td><i>P.M </i></td>
-				<td style="text-align: center"><span>
-						<%out.print(Vpm);%>
-				</span></td>
+				<td style="text-align: center"><span><%out.print(Vpm);%></span></td>
 			</tr>
 		</table>
 		<div class="crt">

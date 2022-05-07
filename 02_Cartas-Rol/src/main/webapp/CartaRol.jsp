@@ -101,13 +101,10 @@
 			%>
 			<table>
 				<caption>
-					<h2>
-						<%out.print(Razas[SRazas]);%>
-					</h2>
+					<h2><%out.print(Razas[SRazas]);%></h2>
 				</caption>
 				<tr>
-					<td rowspan="9" width="140px" height="300px"><img
-						src="img/<%out.print(SRazas);%>.png" height="auto" width="110"></td>
+					<td rowspan="9" width="140px" height="300px"><img src="img/<%out.print(SRazas);%>.png" height="auto" width="110"></td>
 					<th>Carac.</th>
 					<th>Valor Base</th>
 					<th>Mod.</th>
@@ -115,119 +112,47 @@
 				</tr>
 				<tr>
 					<td><i>FUE:</i></td>
-					<td>
-						<%
-						out.print(VBFue);
-						%>
-					</td>
-					<td>
-						<%
-						out.print(ModFue);
-						%>
-					</td>
-					<%
-					int Fuetotal = VBFue + ModFue;
-					%>
-					<td>
-						<%
-						out.print(Fuetotal);
-						%>
-					</td>
+					<td><%out.print(VBFue);%></td>
+					<td><%out.print(ModFue);%></td>
+					<%int Fuetotal = VBFue + ModFue;%>
+					<td><%out.print(Fuetotal);%></td>
 				</tr>
 				<tr>
 					<td><i>DES:</i></td>
-					<td>
-						<%
-						out.print(VBDes);
-						%>
-					</td>
-					<td>
-						<%
-						out.print(ModDes);
-						%>
-					</td>
-					<%
-					int Destotal = VBDes + ModDes;
-					%>
-					<td>
-						<%out.print(Destotal);%>
-					</td>
+					<td><%out.print(VBDes);%></td>
+					<td><%out.print(ModDes);%></td>
+					<%int Destotal = VBDes + ModDes;%>
+					<td><%out.print(Destotal);%></td>
 				</tr>
 				<tr>
 					<td><i>CON:</i></td>
-					<td>
-						<%
-						out.print(VBCon);
-						%>
-					</td>
-					<td>
-						<%
-						out.print(ModCon);
-						%>
-					</td>
-					<%
-					int Contotal = VBCon + ModCon;
-					%>
-					<td>
-						<%out.print(Contotal);%>
-					</td>
+					<td><%out.print(VBCon);%></td>
+					<td><%out.print(ModCon);%></td>
+					<%int Contotal = VBCon + ModCon;%>
+					<td><%out.print(Contotal);%></td>
 				</tr>
 				<tr>
 					<td><i>INT:</i></td>
-					<td>
-						<%
-						out.print(VBInt);
-						%>
-					</td>
-					<td>
-						<%
-						out.print(ModInt);
-						%>
-					</td>
-					<%
-					int Inttotal = VBInt + ModInt;
-					%>
-					<td>
-						<%out.print(Inttotal);%>
-					</td>
+					<td><%out.print(VBInt);%></td>
+					<td><%out.print(ModInt);%></td>
+					<%int Inttotal = VBInt + ModInt;%>
+					<td><%out.print(Inttotal);%></td>
 				</tr>
 				<tr>
 					<td><i>SAB:</i></td>
-					<td>
-						<%
-						out.print(VBSab);
-						%>
-					</td>
-					<td>
-						<%
-						out.print(ModSab);
-						%>
-					</td>
-					<%
-					int Sabtotal = VBSab + ModSab;
-					%>
-					<td>
-						<%out.print(Sabtotal);%>
-					</td>
+					<td><%out.print(VBSab);%></td>
+					<td><%out.print(ModSab);%></td>
+					<%int Sabtotal = VBSab + ModSab;%>
+					<td><%out.print(Sabtotal);%></td>
 				</tr>
 				<tr>
 					<td><i>CAR:</i></td>
-					<td>
-						<%
-						out.print(VBCar);
-						%>
+					<td><%out.print(VBCar);%>
 					</td>
-					<td>
-						<%
-						out.print(ModCar);
-						%>
+					<td><%out.print(ModCar);%>
 					</td>
-					<%
-					int Cartotal = VBCar + ModCar;
-					%>
-					<td>
-						<%out.print(Cartotal);%>
-					</td>
+					<%int Cartotal = VBCar + ModCar;%>
+					<td><%out.print(Cartotal);%></td>
 				</tr>
 				<%
 				//Puntos de vida
@@ -237,36 +162,25 @@
 				%>
 				
 				<tr>
-					<td><i>P.V (<span> <%
- out.print(PVida);
- %>
-						</span>)
-					</i></td>
-					<td colspan="3"><progress max="<%out.print(Maxvida);%>"
-							value="<%out.print(PVida);%>"></progress></td>
+					<td><i>P.V (<span><%out.print(PVida);%></span>)</i></td>
+					<td colspan="3"><progress max="<%out.print(Maxvida);%>" value="<%out.print(PVida);%>"></progress></td>
 				</tr>
 				<tr>
-					<td><i>P.M (<span> <%
- out.print(PMana);
- %>
-						</span>)
-					</i></td>
-					<td colspan="3"><progress class="mana"
-							max="<%out.print(MaxMana);%>" value="<%out.print(PMana);%>"></progress>
-					</td>
+					<td><i>P.M (<span> <%out.print(PMana);%></span>)</i></td>
+					<td colspan="3"><progress class="mana" max="<%out.print(MaxMana);%>" value="<%out.print(PMana);%>"></progress></td>
 				</tr>
 			</table>
 
-			<input type="hidden" name="raza" value="<%=nom_raza%>"> <input
-				type="hidden" name="fue" value="<%=Fuetotal%>"> <input
-				type="hidden" name="des" value="<%=Destotal%>"> <input
-				type="hidden" name="con" value="<%=Contotal%>"> <input
-				type="hidden" name="int" value="<%=Inttotal%>"> <input
-				type="hidden" name="sab" value="<%=Sabtotal%>"> <input
-				type="hidden" name="car" value="<%=Cartotal%>"> <input
-				type="hidden" name="pv" value="<%=PVida%>"> <input
-				type="hidden" name="pm" value="<%=PMana%>"> <input
-				type="hidden" name="img" value="<%out.print(SRazas);%>.png">
+			<input type="hidden" name="raza" value="<%=nom_raza%>">
+			<input type="hidden" name="fue" value="<%=Fuetotal%>">
+			<input type="hidden" name="des" value="<%=Destotal%>">
+			<input type="hidden" name="con" value="<%=Contotal%>">
+			<input type="hidden" name="int" value="<%=Inttotal%>">
+			<input type="hidden" name="sab" value="<%=Sabtotal%>">
+			<input type="hidden" name="car" value="<%=Cartotal%>">
+			<input type="hidden" name="pv" value="<%=PVida%>">
+			<input type="hidden" name="pm" value="<%=PMana%>">
+			<input type="hidden" name="img" value="<%out.print(SRazas);%>.png">
 			<div class="crt">
 				<button type="button" onclick="window.location.reload();">Treure nova carta</button>
 				<input type="submit" value="Desar carta">
