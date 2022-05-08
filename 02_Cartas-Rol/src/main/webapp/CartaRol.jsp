@@ -32,6 +32,8 @@
 	}%>
 
 			<%
+			String userId = request.getParameter("user");
+						
 			int VBFue = getValorbase();
 			int VBDes = getValorbase();
 			int VBCon = getValorbase();
@@ -170,7 +172,7 @@
 					<td colspan="3"><progress class="mana" max="<%out.print(MaxMana);%>" value="<%out.print(PMana);%>"></progress></td>
 				</tr>
 			</table>
-
+			<input type="hidden" name="user" value="<%=userId%>">
 			<input type="hidden" name="raza" value="<%=nom_raza%>">
 			<input type="hidden" name="fue" value="<%=Fuetotal%>">
 			<input type="hidden" name="des" value="<%=Destotal%>">
@@ -184,7 +186,7 @@
 			<div class="crt">
 				<button type="button" onclick="window.location.reload();">Treure nova carta</button>
 				<input type="submit" value="Desar carta">
-				<button type="button" onclick="location.href='paginacio.jsp?pagina=0&raza=ALL&vis=4'">Visualitzar cartes</button>
+				<button type="button" onclick="location.href='paginacio.jsp?pagina=0&raza=ALL&vis=4&user=<%out.print(userId);%>'">Visualitzar cartes</button>
 			</div>
 		</form>
 

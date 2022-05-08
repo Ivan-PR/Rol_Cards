@@ -13,8 +13,9 @@
 	<div id="container2">
 		<h1 class="titol">Les meves cartes</h1>
 		<ul class="llista">
-			<li><a href="index.html">Inici</a></li>
-			<li><a href="CartaRol.jsp">Treure cartes</a></li>
+		<%String id_user = request.getParameter("user");%>
+			<li><a href="CartaRol.jsp?pagina=0&user=<%out.print(id_user);%>">Treure cartes</a></li>
+			<li><a href="index.html">Sortir</a></li>
 		</ul>
 		<br> <br>
 		<label class="filtre" for="raza">Filtrar per raza: 
@@ -29,6 +30,7 @@
 		</select>
 		</label> <br> <br>
 		<%
+		
 		String raza_seleccionada = request.getParameter("raza");
 		String pag = request.getParameter("pagina");
 
@@ -65,12 +67,12 @@
 		<script>
 		function visual(p) {
 			let num = p;
-			window.location.href = "paginacio.jsp?pagina=0&raza=" + valor+ "&vis=" +num;
+			window.location.href = "paginacio.jsp?pagina=0&raza=" + valor+ "&vis=" +num+"&user=" +id_user;
 			
 			}
 		function filtre(s) {
 			let valor = s;
-			window.location.href = "paginacio.jsp?pagina=0&raza=" + valor+ "&vis=" +<%out.print(TAMANO_PAGINA);%>;
+			window.location.href = "paginacio.jsp?pagina=0&raza=" + valor+ "&vis=" +<%out.print(TAMANO_PAGINA);%>+"&user=" +id_user;
 			
 			}
 		</script>
@@ -96,9 +98,9 @@
 		//creamos la consulta
 
 		if (!raza_seleccionada.equals("ALL")) {
-			num_reg = num_registres.executeQuery("SELECT * FROM Carta where RACE_carta='" + raza_seleccionada + "'");
+			num_reg = num_registres.executeQuery("SELECT * FROM Carta where RACE_carta='" + raza_seleccionada + " and id_user="+id_user+"'");
 		} else {
-			num_reg = num_registres.executeQuery("SELECT * FROM Carta");
+			num_reg = num_registres.executeQuery("SELECT * FROM Carta where id_user="+id_user+"");
 		}
 
 		int num_total_registros = 0;
@@ -125,7 +127,7 @@
 
 					else
 				//si el índice no corresponde con la página mostrada actualmente, coloco el enlace para ir a esa página
-				out.print(" <a href=paginacio.jsp?pagina=" + i + "&raza=" + raza_seleccionada + "&vis=" + TAMANO_PAGINA + ">" + i + "</a> ");
+				out.print(" <a href=paginacio.jsp?pagina=" + i + "&raza=" + raza_seleccionada + "&vis=" + TAMANO_PAGINA + "&user=" + id_user +">" + i + "</a> ");
 
 				}
 			}
@@ -145,12 +147,11 @@ try {
 	//inmediatamente hacemos una consulta sencilla
 	//creamos la consulta
 	String sentence;
-
+// -----------------------------------------------------------------------------------------------------------
 	if (!raza_seleccionada.equals("ALL")) {
-		sentence = "SELECT * from Carta where RACE_carta='" + raza_seleccionada + "' limit " + inicio + ","
-		+ TAMANO_PAGINA;
+		sentence = "SELECT * from Carta where RACE_carta='" + raza_seleccionada + "' and id_user="+id_user+" limit " + inicio + "," + TAMANO_PAGINA;
 	} else {
-		sentence = "SELECT * from Carta limit " + inicio + "," + TAMANO_PAGINA;
+		sentence = "SELECT * from Carta where id_user="+id_user+" limit " + inicio + "," + TAMANO_PAGINA;
 	}
 
 	rs = statement.executeQuery(sentence);

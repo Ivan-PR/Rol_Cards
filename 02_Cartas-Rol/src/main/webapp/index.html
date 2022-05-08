@@ -4,22 +4,28 @@
 <head>
 <meta charset="UTF-8">
 <title>Cartas Rol</title>
+
 <link rel="stylesheet" href="css/style2.css" type="text/css" />
+
 </head>
 <body>
 	<div class="container">
 		<h1>Unboxing rol cards</h1>
 		<div class="overlay"></div>
-	</div>
-	<div id="login">
-		<form action="personal.html" method="post">
-			<label for="usuari">Nom usuari:</label>
-			<input type="text" id="usuari" name="usuari"><br><br>
-			<label for="pass">Contrasenya:</label>
+		<div class="login" style="z-index: 10;top: 85%;position: absolute;justify-content: center;align-items: center;display: flex;margin: 0 auto;">
+		<form action="login.jsp" method="post">
+			<label for="usuari" style="color:red;">Nom usuari:</label>
+			<input type="text" id="usuari" name="usr"><br><br>
+			<label for="pass" style="color:red;">Contrasenya:</label>
 			<input type="password" id="pass" name="password"><br><br>
-			<input type="submit" value="Accedir" />
+			<input type="submit" value="Accedir" style="height:50px;width:100px;margin: 0 auto;display: flex;align-items: center;"/>
 		</form>
+		
 	</div>
+		
+		
+	</div>
+	
 	
 </body>
 </html>

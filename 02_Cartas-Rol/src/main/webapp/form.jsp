@@ -22,6 +22,7 @@
 	%>
 	<div id="container">
 		<%
+		String id_user = request.getParameter("user");
 		String nom_carta = request.getParameter("nom");
 		String Vfue = request.getParameter("fue");
 		String Vdes = request.getParameter("des");
@@ -52,7 +53,7 @@
 			statement = conn.createStatement();
 			//inmediatamente hacemos un insert amb les dades
 			//creamos la consulta
-	int i=statement.executeUpdate("insert into Carta(NOM_carta,PIC_carta,RACE_carta,FUE_carta,DES_carta,CON_carta,INT_carta,SAB_carta,CAR_carta,PV_carta,PM_carta)values('"+nom_carta+"','"+picture+"','"+Rza+"',"+nfue+","+ndes+","+ncon+","+nint+","+nsab+","+ncar+","+npv+","+npm+")");
+	int i=statement.executeUpdate("insert into Carta(NOM_carta,PIC_carta,RACE_carta,FUE_carta,DES_carta,CON_carta,INT_carta,SAB_carta,CAR_carta,PV_carta,PM_carta,id_user)values('"+nom_carta+"','"+picture+"','"+Rza+"',"+nfue+","+ndes+","+ncon+","+nint+","+nsab+","+ncar+","+npv+","+npm+","+id_user+")");
 	%>
 	<h2 class="confirm"><img src="img/ok.png" title="OK" alt="OK" width="25" height="25">La carta s'ha desat correctament!</h2>
 	<%
@@ -103,9 +104,9 @@
 			</tr>
 		</table>
 		<div class="crt">
-		<button onclick="location.href='CartaRol.jsp?pagina=0'">Treure nova carta</button>
+		<button onclick="location.href='CartaRol.jsp?pagina=0&user=<%out.print(id_user);%>'">Treure nova carta</button>
 		
-		<button onclick="location.href='paginacio.jsp?pagina=0&raza=ALL&vis=4'">Visualitzar cartes</button></div>
+		<button onclick="location.href='paginacio.jsp?pagina=0&raza=ALL&vis=4&user=<%out.print(id_user);%>'">Visualitzar cartes</button></div>
 		
 	</div>
 </body>
