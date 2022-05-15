@@ -91,15 +91,22 @@ label{
 	text-shadow: 0.1em 0.1em 0.2em brown;
 }
 
-input[type=text] {
+input[type=text],input[type=password] {
 	background: linear-gradient(to top, #c6a666,#f5e3b0);
 	height:25px;
 	color:white;
 	font-weight: bold;
 	margin-top:5px;
 	margin-bottom:15px;
-
 }
+
+input[type=submit]{
+	height:50px;
+	padding:10px;
+	background-color: #f8d661;
+	border-radius:20px;
+}
+
 .crt{
 	display:flex;
 	justify-content: space-around;
@@ -235,4 +242,44 @@ h2 img {
 	position:relative;
 	bottom:5px;
 }
+
+/*_____________ACCEDIR______________*/
+
+.accedir h1{
+	color:orange;
+	text-align:center;
+	font-weight: bold;
+	text-shadow: 0.1em 0.1em 0.2em brown;
+}
+
+/*_____________MENU______________*/
+.botons{
+	display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.botons button{
+	
+	height:50px;
+	padding:10px;
+	margin-right:20px;
+	background-color: #f8d661;
+	border-radius:20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

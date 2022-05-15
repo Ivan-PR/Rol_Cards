@@ -1,6 +1,7 @@
 <%@ page import="java.util.Arrays,java.util.List,java.sql.*,java.util.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	
 
 <%
 //variables per fer la connexio:
@@ -29,14 +30,15 @@ try{
 	rs.next();
 	        if(rs.getString("password").equals(pass)&&rs.getString("nom").equals(userid)) 
 			{ 
-	        	String redirectURL = "CartaRol.jsp?pagina=0&user="+rs.getString("id_usuari");
+	        	String redirectURL = "menu.jsp?pagina=0&user="+rs.getString("id_usuari");
 	            response.sendRedirect(redirectURL);
 			} 
 		else{
-			 out.println("Invalid password or username.");
-		    }
+			out.println("<h1>Contrasenya o usuari erronis.</h1>");
+					    }
 }
 catch (Exception e) {
+	response.sendRedirect("accedir.html");
 e.printStackTrace();
 }
 %>

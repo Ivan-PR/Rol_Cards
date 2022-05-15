@@ -164,11 +164,11 @@
 				%>
 				
 				<tr>
-					<td><i>P.V (<span><%out.print(PVida);%></span>)</i></td>
+					<td><i>P.V ( <span><%out.print(PVida);%></span> )</i></td>
 					<td colspan="3"><progress max="<%out.print(Maxvida);%>" value="<%out.print(PVida);%>"></progress></td>
 				</tr>
 				<tr>
-					<td><i>P.M (<span> <%out.print(PMana);%></span>)</i></td>
+					<td><i>P.M (<span> <%out.print(PMana);%></span> )</i></td>
 					<td colspan="3"><progress class="mana" max="<%out.print(MaxMana);%>" value="<%out.print(PMana);%>"></progress></td>
 				</tr>
 			</table>
@@ -185,9 +185,15 @@
 			<input type="hidden" name="img" value="<%out.print(SRazas);%>.png">
 			<div class="crt">
 				<button type="button" onclick="window.location.reload();">Treure nova carta</button>
+				
 				<input type="submit" value="Desar carta">
+				
 				<button type="button" onclick="location.href='paginacio.jsp?pagina=0&raza=ALL&vis=4&user=<%out.print(userId);%>'">Visualitzar cartes</button>
-			</div>
+				
+			</div><br><br>
+			<div class="botons">
+			<button type="button" onclick="location.href='index.html'">Sortir</button>
+		    </div>
 		</form>
 
 	</div>

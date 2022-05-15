@@ -104,10 +104,11 @@
 			</tr>
 		</table>
 		<div class="crt">
-		<button onclick="location.href='CartaRol.jsp?pagina=0&user=<%out.print(id_user);%>'">Treure nova carta</button>
-		
-		<button onclick="location.href='paginacio.jsp?pagina=0&raza=ALL&vis=4&user=<%out.print(id_user);%>'">Visualitzar cartes</button></div>
-		
-	</div>
+			<button onclick="location.href='CartaRol.jsp?pagina=0&user=<%out.print(id_user);%>'">Treure nova carta</button>
+			<button onclick="location.href='paginacio.jsp?pagina=0&raza=ALL&vis=4&user=<%out.print(id_user);%>'">Visualitzar cartes</button></div>
+		</div><br><br>
+			<div class="botons">
+			<button type="button" onclick="location.href='index.html'">Sortir</button>
+		    </div>
 </body>
 </html>
