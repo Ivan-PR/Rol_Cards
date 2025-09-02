@@ -34,7 +34,7 @@
 
 		//  variables per fer la connexio:
 		String user = "root";
-		String password = "Myfunshop942";
+		String password = "123456";
 		String host = "localhost";
 		String db = "db_cartas_rol";
 		String url = "jdbc:mysql://" + host + "/" + db;
